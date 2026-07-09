@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <div class="row">
+    <div class="col">
+      <h2>Monthly Summary</h2>
+      <p class="muted">Income, Expense and Net per month.</p>
+    </div>
+    <div class="col center">
+      <a class="btn" href="/download">Download Excel</a>
+    </div>
+  </div>
+
+  <div style="height:12px"></div>
+
+  {% if monthly_html %}
+    <div class="card table-wrap">
+      {{ monthly_html | safe }}
+    </div>
+  {% else %}
+    <div class="card">
+      <p class="muted">No data found. Please upload a CSV file first.</p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

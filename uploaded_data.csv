@@ -1,0 +1,27 @@
+Date,Description,Category,Amount,Balance
+2025-10-01,Salary,Income,50000,50000
+2025-10-03,Groceries,Expense,-1200,48800
+2025-10-05,Electricity Bill,Expense,-1800,47000
+2025-10-10,Mobile Recharge,Expense,-300,46700
+2025-10-15,Freelance Work,Income,7000,53700
+2025-10-20,Shopping,Expense,-3500,50200
+2025-10-25,Rent,Expense,-8000,42200
+2025-10-28,Internet Bill,Expense,-700,41500
+2025-11-01,Salary,Income,50000,91500
+2025-11-02,Groceries,Expense,-1500,90000
+2025-11-03,Electricity Bill,Expense,-2000,88000
+2025-11-05,Restaurant,Expense,-800,87200
+2025-11-10,Freelance Work,Income,8000,95200
+2025-11-12,Internet Bill,Expense,-600,94600
+2025-11-15,Shopping,Expense,-4500,90100
+2025-11-20,Savings Transfer,Expense,-5000,85100
+2025-11-25,Deposit Interest,Income,200,85300
+2025-12-01,Salary,Income,50000,135300
+2025-12-04,Groceries,Expense,-2000,133300
+2025-12-06,Restaurant,Expense,-900,132400
+2025-12-10,Freelance Work,Income,6000,138400
+2025-12-12,Electricity Bill,Expense,-2200,136200
+2025-12-18,Shopping,Expense,-3500,132700
+2025-12-22,Online Purchase,Expense,-2700,130000
+2025-12-28,Internet Bill,Expense,-700,129300
+2025-12-30,Deposit Interest,Income,250,129550

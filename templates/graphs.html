@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <div class="row">
+    <div class="col">
+      <h2>Monthly Charts</h2>
+      <p class="muted">Deposit, Withdrawal and Balance combined line chart.</p>
+    </div>
+    <div class="col center">
+      <a class="btn" href="/">Upload new CSV</a>
+    </div>
+  </div>
+
+  <div style="height:18px"></div>
+
+  {% if graph_url %}
+    <div class="card center">
+      <img src="{{ graph_url }}" alt="Monthly chart" style="max-width:100%; border-radius:8px;">
+    </div>
+  {% else %}
+    <div class="card">
+      <p class="muted">No chart available. Upload CSV first.</p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

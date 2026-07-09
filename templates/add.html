@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .card {
+        max-width: 480px;
+        margin: 40px auto;
+        padding: 28px;
+        background: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.12);
+        font-family: "Poppins", sans-serif;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    .card h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0047b3;
+        font-weight: 600;
+    }
+
+    label {
+        font-weight: 600;
+        color: #333;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 11px;
+        border: 1px solid #c9d7ff;
+        border-radius: 10px;
+        background: #f4f7ff;
+        margin-top: 5px;
+        font-size: 15px;
+        transition: 0.25s;
+    }
+
+    input:focus, select:focus {
+        border-color: #0047b3;
+        background: #fff;
+        box-shadow: 0 0 8px rgba(0, 71, 179, 0.3);
+        outline: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 13px;
+        margin-top: 20px;
+        background: #0047b3;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #003583;
+        transform: scale(1.03);
+    }
+
+    .note {
+        font-size: 13px;
+        color: #666;
+        margin-top: 5px;
+    }
+</style>
+
+<div class="card">
+    <h2>Add New Transaction</h2>
+
+    <form action="{{ url_for('add_transaction') }}" method="POST">
+
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <label>Description:</label>
+        <input type="text" name="description" 
+               placeholder="e.g., Salary, Shopping, Rent" 
+               required>
+
+        <label>Category:</label>
+        <select name="category" required>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+            <option value="Savings">Savings</option>
+        </select>
+
+        <label>Amount:</label>
+        <input type="number" step="0.01" min="0"
+               name="amount"
+               placeholder="Enter amount"
+               required>
+        <div class="note">
+            Enter positive amount. System will automatically treat Expense as negative.
+        </div>
+
+        <button type="submit">Add Transaction</button>
+    </form>
+</div>
+
+{% endblock %}

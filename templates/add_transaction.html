@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #444;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input, select {
+            width: 250px;
+            padding: 8px;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #28a745;
+            font-size: 18px;
+        }
+
+        .back-link:hover {
+            color: #1e7e34;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Add New Transaction</h1>
+
+    <form method="POST" action="{{ url_for('add_transaction') }}">
+
+        <label>Date:</label><br>
+        <input type="date" name="date" required><br>
+
+        <label>Description:</label><br>
+        <input type="text" name="description" required><br>
+
+        <label>Category:</label><br>
+        <select name="category" required>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+            <option value="Savings">Savings</option>
+        </select><br>
+
+        <label>Amount:</label><br>
+        <input type="number" name="amount" step="0.01" min="0" required><br>
+
+        <button class="btn" type="submit">Save</button>
+    </form>
+
+    <a class="back-link" href="{{ url_for('index') }}">← Back to Dashboard</a>
+
+</body>
+</html>

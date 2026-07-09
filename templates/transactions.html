@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <div class="row">
+    <div class="col">
+      <h2>All Transactions</h2>
+      <p class="muted">Complete transaction history from uploaded CSV.</p>
+    </div>
+    <div class="col center">
+      <a class="btn" href="/">Upload new CSV</a>
+    </div>
+  </div>
+
+  <div style="height:12px"></div>
+
+  <div class="card table-wrap">
+    {{ table_html | safe }}
+  </div>
+</div>
+{% endblock %}

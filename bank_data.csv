@@ -1,0 +1,16 @@
+Date,Description,Category,Amount,Balance
+2025-01-02,Salary,Income,30000,30000
+2025-01-05,Groceries,Expense,-2500,27500
+2025-01-08,Electricity Bill,Expense,-1200,26300
+2025-01-15,Freelance Project,Income,8000,34300
+2025-01-20,Shopping,Expense,-4000,30300
+2025-02-01,Salary,Income,30000,60300
+2025-02-04,Restaurant,Expense,-1800,58500
+2025-02-10,Internet Bill,Expense,-1000,57500
+2025-02-18,Stock Profit,Income,5000,62500
+2025-02-25,Travel,Expense,-6000,56500
+2025-03-01,Salary,Income,30000,86500
+2025-03-03,Petrol,Expense,-2000,84500
+2025-03-10,Medical,Expense,-3500,81000
+2025-03-18,Bonus,Income,10000,91000
+2025-03-25,Shopping,Expense,-4500,86500

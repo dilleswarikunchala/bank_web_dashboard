@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <div class="row">
+    <div class="col">
+      <h2>Upload Bank CSV File</h2>
+      <p class="muted">Upload your CSV (Date, Description, Category, Amount, Balance). File will be stored and used for summaries & charts.</p>
+
+      <form action="/upload" method="POST" enctype="multipart/form-data" style="margin-top:14px;">
+        <input type="file" name="file" accept=".csv" required>
+        <div style="height:12px"></div>
+        <button class="btn" type="submit" style="width:100%;">Upload & Process</button>
+      </form>
+    </div>
+
+    <div class="col">
+      <h2>Quick Links</h2>
+      <p class="muted">Jump to the section you want after uploading a file.</p>
+
+      <div class="nav" style="margin-top:12px">
+        <a class="btn secondary" href="/summary">View Monthly Summary</a>
+        <a class="btn secondary" href="/transactions">View All Transactions</a>
+        <a class="btn secondary" href="/graphs">View Graphs</a>
+        <a class="btn secondary" href="/add">Add Transaction</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
